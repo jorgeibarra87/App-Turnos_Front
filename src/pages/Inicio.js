@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Inicio() {
   const [personas, setPersonas] = useState([]);
@@ -37,10 +38,18 @@ export default function Inicio() {
                 <td>{persona.nombreCompleto}</td>
                 <td>{persona.telefono}</td>
                 <td>
-                  <button className="btn btn-primary mx-2">Ver</button>
-                  <button className="btn btn-outline-primary mx-2">
+                  <Link
+                    className="btn btn-primary mx-2"
+                    to={`/ver-persona/${persona.idPersona}`}
+                  >
+                    Ver
+                  </Link>
+                  <Link
+                    className="btn btn-outline-primary mx-2"
+                    to={`/editar-persona/${persona.idPersona}`}
+                  >
                     Editar
-                  </button>
+                  </Link>
                   {/* <button className="btn btn-danger mx-2">Eliminar</button> */}
                 </td>
               </tr>

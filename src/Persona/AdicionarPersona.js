@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Para redirigir después de enviar el formulario
+import { Link } from "react-router-dom";
 
 export default function AdicionarPersona() {
   let navigate = useNavigate(); // Para redirigir después de enviar el formulario
@@ -87,9 +88,9 @@ export default function AdicionarPersona() {
             <button type="submit" className="btn btn-outline-primary">
               Enviar
             </button>
-            <button type="submit" className="btn btn-outline-danger mx-2">
+            <Link className="btn btn-outline-danger mx-2" to="/">
               Cancelar
-            </button>
+            </Link>
           </form>
         </div>
       </div>
