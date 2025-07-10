@@ -36,7 +36,13 @@ export default function Inicio() {
                 <td>{persona.email}</td>
                 <td>{persona.nombreCompleto}</td>
                 <td>{persona.telefono}</td>
-                <td></td>
+                <td>
+                  <button className="btn btn-primary mx-2">Ver</button>
+                  <button className="btn btn-outline-primary mx-2">
+                    Editar
+                  </button>
+                  {/* <button className="btn btn-danger mx-2">Eliminar</button> */}
+                </td>
               </tr>
             ))}
           </tbody>
